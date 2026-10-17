@@ -18,8 +18,7 @@ import shopName, { products, formatEGP } from "./catalog.js";
  * @returns {number}
  */
 export function productCount() {
-  // TODO: the imported array is just an array.
-  throw new Error("productCount is not written yet");
+  return products.length;
 }
 
 /**
@@ -32,8 +31,7 @@ export function productCount() {
  * @returns {string}
  */
 export function priceTag(product) {
-  // TODO: pass the product's price to the imported function.
-  throw new Error("priceTag is not written yet");
+  return formatEGP(product.price);
 }
 
 /**
@@ -45,31 +43,5 @@ export function priceTag(product) {
  * @returns {string}
  */
 export function shopHeading() {
-  // TODO: a template literal, with the imported name in it.
-  throw new Error("shopHeading is not written yet");
+  return `${shopName} catalog`;
 }
-
-/**
- * Now the other half of the module: you write a file, not just a function.
- *
- * Create a NEW file next to this one, called exactly:
- *
- *     06-modules/discounts.js
- *
- * In VS Code: right-click the `06-modules` folder in the Explorer sidebar,
- * choose New File, and type the name.
- *
- * That file must export TWO things:
- *
- *   1. A NAMED export, a function called `halfPrice`:
- *        halfPrice(320) -> 160
- *        halfPrice(45)  -> 22.5
- *
- *   2. A DEFAULT export, the string "Winter sale".
- *
- * Nothing in this file imports it. The tests do — which is the point. You are
- * writing a module for someone else to use, the same way catalog.js was
- * written for you.
- *
- * Do not write it below this comment. Write it in the new file.
- */
